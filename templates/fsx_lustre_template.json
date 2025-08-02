@@ -1,0 +1,26 @@
+{
+  "FileSystemType": "LUSTRE",
+  "StorageCapacity": 1200,
+  "SubnetIds": [
+    "subnet-xxxxxxxxx"
+  ],
+  "SecurityGroupIds": [
+    "sg-xxxxxxxxx"
+  ],
+  "Tags": [
+    {
+      "Key": "Name",
+      "Value": "FSx-Lustre-FileSystem"
+    },
+    {
+      "Key": "Environment",
+      "Value": "Development"
+    }
+  ],
+  "LustreConfiguration": {
+    "ImportPath": "s3://your-bucket-name/import-path/",
+    "ExportPath": "s3://your-bucket-name/export-path/",
+    "WeeklyMaintenanceStartTime": "2:00:00",
+    "DeploymentType": "SCRATCH_2"
+  }
+}

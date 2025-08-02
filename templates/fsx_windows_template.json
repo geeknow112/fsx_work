@@ -1,0 +1,30 @@
+{
+  "FileSystemType": "WINDOWS",
+  "StorageCapacity": 32,
+  "StorageType": "SSD",
+  "SubnetIds": [
+    "subnet-xxxxxxxxx"
+  ],
+  "SecurityGroupIds": [
+    "sg-xxxxxxxxx"
+  ],
+  "Tags": [
+    {
+      "Key": "Name",
+      "Value": "FSx-Windows-FileServer"
+    },
+    {
+      "Key": "Environment",
+      "Value": "Production"
+    }
+  ],
+  "WindowsConfiguration": {
+    "ActiveDirectoryId": "d-xxxxxxxxx",
+    "ThroughputCapacity": 8,
+    "WeeklyMaintenanceStartTime": "1:00:00",
+    "DailyAutomaticBackupStartTime": "05:00",
+    "AutomaticBackupRetentionDays": 7,
+    "CopyTagsToBackups": true,
+    "DeploymentType": "SINGLE_AZ_2"
+  }
+}

@@ -1,0 +1,59 @@
+# 企業情報を含むファイルを完全除外
+
+# 企業情報を含む分析ドキュメント
+docs/
+*.md
+
+# AWS認証情報・設定ファイル
+.aws/
+*.pem
+*.key
+*credential*
+*config*
+
+# 企業固有の情報
+*company*
+*enterprise*
+*corp*
+*organization*
+*org*
+
+# 実際のリソースID・ARN・IPアドレス等
+*fs-*
+*subnet-*
+*vpc-*
+*arn:aws:*
+*172.16.*
+*192.168.*
+*10.*
+
+# ドメイン・DNS情報
+*.local
+*.internal
+*.corp
+*.company
+
+# 機密情報
+*secret*
+*private*
+*confidential*
+*password*
+*token*
+*api-key*
+
+# 一時ファイル・ログ
+*.tmp
+*.temp
+*.log
+*.bak
+*.backup
+
+# 実行結果・出力ファイル
+output/
+results/
+logs/
+
+# 環境固有設定
+.env
+.env.*
+environment.*

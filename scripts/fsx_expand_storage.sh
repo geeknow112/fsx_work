@@ -5,7 +5,7 @@
 
 if [ $# -lt 2 ]; then
     echo "使用方法: $0 <file-system-id> <target-capacity-gb> [profile] [region]"
-    echo "例: $0 fs-xxxxxxxxx 7200 lober-system ap-northeast-1"
+    echo "例: $0 fs-xxxxxxxxx 7200 your-profile ap-northeast-1"
     echo ""
     echo "注意事項:"
     echo "- 容量は現在の容量より大きい値を指定してください"
@@ -16,7 +16,7 @@ fi
 
 FILE_SYSTEM_ID=$1
 TARGET_CAPACITY=$2
-PROFILE=${3:-lober-system}
+PROFILE=${3:-your-profile}
 REGION=${4:-ap-northeast-1}
 
 echo "=== FSx ストレージ容量拡張 ==="

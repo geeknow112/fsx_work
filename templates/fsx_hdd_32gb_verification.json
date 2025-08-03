@@ -1,0 +1,42 @@
+{
+  "FileSystemType": "WINDOWS",
+  "StorageCapacity": 32,
+  "StorageType": "HDD",
+  "SubnetIds": [
+    "subnet-0756833f80249b7c9",
+    "subnet-092ae56c62ada86b9"
+  ],
+  "SecurityGroupIds": [
+    "sg-026e3cb19c2a34ef5"
+  ],
+  "Tags": [
+    {
+      "Key": "Name",
+      "Value": "FSx-HDD-32GB-Verification"
+    },
+    {
+      "Key": "Environment",
+      "Value": "Verification"
+    },
+    {
+      "Key": "Purpose",
+      "Value": "HDD-Performance-Test"
+    },
+    {
+      "Key": "Project",
+      "Value": "FSx-SSD-to-HDD-Migration"
+    }
+  ],
+  "WindowsConfiguration": {
+    "ActiveDirectoryId": "d-95672c05c5",
+    "ThroughputCapacity": 16,
+    "WeeklyMaintenanceStartTime": "4:19:30",
+    "DailyAutomaticBackupStartTime": "16:00",
+    "AutomaticBackupRetentionDays": 7,
+    "CopyTagsToBackups": false,
+    "DeploymentType": "MULTI_AZ_1",
+    "Aliases": [
+      "fsx-hdd-test.47club.local"
+    ]
+  }
+}

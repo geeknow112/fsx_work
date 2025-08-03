@@ -28,7 +28,7 @@ Amazon FSx ファイルシステムを管理するためのAWS CLIスクリプ�
 ./scripts/fsx_describe.sh
 
 # プロファイルとリージョンを指定
-./scripts/fsx_describe.sh my-profile us-west-2
+./scripts/fsx_describe.sh lober-system ap-northeast-1
 ```
 
 ### 2. パフォーマンス監視 (`scripts/fsx_performance_monitor.sh`)
@@ -40,7 +40,7 @@ FSxファイルシステムのパフォーマンスメトリクスを取得し�
 ./scripts/fsx_performance_monitor.sh fs-xxxxxxxxx
 
 # 詳細指定
-./scripts/fsx_performance_monitor.sh fs-xxxxxxxxx my-profile ap-northeast-1 14
+./scripts/fsx_performance_monitor.sh fs-xxxxxxxxx lober-system ap-northeast-1 14
 ```
 
 ### 3. FSx作成 (`scripts/fsx_create.sh`)
@@ -48,14 +48,37 @@ FSxファイルシステムのパフォーマンスメトリクスを取得し�
 テンプレートを使用してFSxファイルシステムを作成します。
 
 ```bash
+# 32GB HDD検証用作成
+./scripts/fsx_create.sh templates/fsx_hdd_32gb_verification.json lober-system ap-northeast-1
+
 # Windows File Server作成
 ./scripts/fsx_create.sh templates/fsx_windows_template.json
 
 # Lustre作成
-./scripts/fsx_create.sh templates/fsx_lustre_template.json my-profile us-east-1
+./scripts/fsx_create.sh templates/fsx_lustre_template.json lober-system ap-northeast-1
+```
+
+### 4. ストレージ容量拡張 (`scripts/fsx_expand_storage.sh`) **NEW**
+
+FSxファイルシステムのストレージ容量を拡張します。
+
+```bash
+# 32GB → 7.2TB拡張
+./scripts/fsx_expand_storage.sh fs-xxxxxxxxx 7200 lober-system ap-northeast-1
+
+# 基本的な使用方法
+./scripts/fsx_expand_storage.sh <file-system-id> <target-capacity-gb> [profile] [region]
 ```
 
 ## テンプレート
+
+### 32GB HDD検証用 (`templates/fsx_hdd_32gb_verification.json`) **NEW**
+
+- Multi-AZ構成
+- 32GB HDDストレージ
+- 16 MB/sスループット
+- Active Directory統合
+- パフォーマンス検証用設定
 
 ### Windows File Server (`templates/fsx_windows_template.json`)
 

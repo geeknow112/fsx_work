@@ -5,12 +5,12 @@
 
 if [ $# -lt 1 ]; then
     echo "使用方法: $0 <filesystem-id> [profile] [region] [days]"
-    echo "例: $0 fs-xxxxxxxxx default ap-northeast-1 7"
+    echo "例: $0 fs-xxxxxxxxx lober-system ap-northeast-1 7"
     exit 1
 fi
 
 FILESYSTEM_ID=$1
-PROFILE=${2:-default}
+PROFILE=${2:-lober-system}
 REGION=${3:-ap-northeast-1}
 DAYS=${4:-7}
 
@@ -57,17 +57,51 @@ aws cloudwatch get-metric-statistics \
 
 echo ""
 
-# I/O時間
-echo "--- I/O応答時間 (時間別平均) ---"
+# スループット使用率
+echo "--- ネットワークスループット使用率 (時間別) ---"
 aws cloudwatch get-metric-statistics \
     --profile "$PROFILE" \
     --region "$REGION" \
     --namespace "AWS/FSx" \
-    --metric-name "TotalIOTime" \
+    --metric-name "NetworkThroughputUtilization" \
     --dimensions Name=FileSystemId,Value="$FILESYSTEM_ID" \
     --start-time "$START_DATE" \
     --end-time "$END_DATE" \
     --period 3600 \
     --statistics Average,Maximum \
-    --query 'Datapoints[*].{Time:Timestamp,AvgIOTime:Average,MaxIOTime:Maximum}' \
+    --query 'Datapoints[*].{Time:Timestamp,AvgThroughput:Average,MaxThroughput:Maximum}' \
+    --output table
+
+echo ""
+
+# IOPS使用率
+echo "--- IOPS使用率 (時間別) ---"
+aws cloudwatch get-metric-statistics \
+    --profile "$PROFILE" \
+    --region "$REGION" \
+    --namespace "AWS/FSx" \
+    --metric-name "DiskIopsUtilization" \
+    --dimensions Name=FileSystemId,Value="$FILESYSTEM_ID" \
+    --start-time "$START_DATE" \
+    --end-time "$END_DATE" \
+    --period 3600 \
+    --statistics Average,Maximum \
+    --query 'Datapoints[*].{Time:Timestamp,AvgIOPS:Average,MaxIOPS:Maximum}' \
+    --output table
+
+echo ""
+
+# ストレージ使用率
+echo "--- ストレージ使用率 ---"
+aws cloudwatch get-metric-statistics \
+    --profile "$PROFILE" \
+    --region "$REGION" \
+    --namespace "AWS/FSx" \
+    --metric-name "StorageCapacityUtilization" \
+    --dimensions Name=FileSystemId,Value="$FILESYSTEM_ID" \
+    --start-time "$START_DATE" \
+    --end-time "$END_DATE" \
+    --period 86400 \
+    --statistics Average \
+    --query 'Datapoints[*].{Date:Timestamp,StorageUsage:Average}' \
     --output table

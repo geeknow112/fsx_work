@@ -5,12 +5,12 @@
 
 if [ $# -lt 1 ]; then
     echo "使用方法: $0 <filesystem-id> [profile] [region] [days]"
-    echo "例: $0 fs-xxxxxxxxx lober-system ap-northeast-1 7"
+    echo "例: $0 fs-xxxxxxxxx your-profile ap-northeast-1 7"
     exit 1
 fi
 
 FILESYSTEM_ID=$1
-PROFILE=${2:-lober-system}
+PROFILE=${2:-your-profile}
 REGION=${3:-ap-northeast-1}
 DAYS=${4:-7}
 

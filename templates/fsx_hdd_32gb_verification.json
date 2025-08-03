@@ -36,7 +36,7 @@
     "CopyTagsToBackups": false,
     "DeploymentType": "MULTI_AZ_1",
     "Aliases": [
-      "fsx-hdd-test.47club.local"
+      "fsx-hdd-test.company.local"
     ]
   }
 }

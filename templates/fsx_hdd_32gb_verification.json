@@ -35,6 +35,7 @@
     "AutomaticBackupRetentionDays": 7,
     "CopyTagsToBackups": false,
     "DeploymentType": "MULTI_AZ_1",
+    "PreferredSubnetId": "subnet-xxxxxxxxx",
     "Aliases": [
       "srv-file-hdd.company.local"
     ]

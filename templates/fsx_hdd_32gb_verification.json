@@ -3,11 +3,11 @@
   "StorageCapacity": 32,
   "StorageType": "HDD",
   "SubnetIds": [
-    "subnet-0756833f80249b7c9",
-    "subnet-092ae56c62ada86b9"
+    "subnet-xxxxxxxxx",
+    "subnet-yyyyyyyyy"
   ],
   "SecurityGroupIds": [
-    "sg-026e3cb19c2a34ef5"
+    "sg-xxxxxxxxx"
   ],
   "Tags": [
     {
@@ -28,7 +28,7 @@
     }
   ],
   "WindowsConfiguration": {
-    "ActiveDirectoryId": "d-95672c05c5",
+    "ActiveDirectoryId": "d-xxxxxxxxx",
     "ThroughputCapacity": 16,
     "WeeklyMaintenanceStartTime": "4:19:30",
     "DailyAutomaticBackupStartTime": "16:00",

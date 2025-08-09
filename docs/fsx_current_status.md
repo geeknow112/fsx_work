@@ -19,8 +19,8 @@
 ### ネットワーク設定
 - **VPC ID**: vpc-6c0ea60b
 - **サブネット**: 
-  - subnet-0756833f80249b7c9 (優先)
-  - subnet-092ae56c62ada86b9
+  - subnet-xxxxxxxxx (優先)
+  - subnet-yyyyyyyyy
 - **DNS名**: amznfsxzhvxsuy4.company.local
 - **管理エンドポイント**: amznfsxwiqlhcih.company.local
 - **優先ファイルサーバーIP**: 172.16.5.245

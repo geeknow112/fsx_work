@@ -3,10 +3,10 @@
   "StorageCapacity": 32,
   "StorageType": "SSD",
   "SubnetIds": [
-    "subnet-0756833f80249b7c9"
+    "subnet-xxxxxxxxx"
   ],
   "SecurityGroupIds": [
-    "sg-026e3cb19c2a34ef5"
+    "sg-xxxxxxxxx"
   ],
   "Tags": [
     {
@@ -19,7 +19,7 @@
     }
   ],
   "WindowsConfiguration": {
-    "ActiveDirectoryId": "d-95672c05c5",
+    "ActiveDirectoryId": "d-xxxxxxxxx",
     "ThroughputCapacity": 8,
     "WeeklyMaintenanceStartTime": "1:00:00",
     "DailyAutomaticBackupStartTime": "05:00",

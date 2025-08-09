@@ -1,6 +1,6 @@
 {
   "FileSystemType": "WINDOWS",
-  "StorageCapacity": 32,
+  "StorageCapacity": 2000,
   "StorageType": "HDD",
   "SubnetIds": [
     "subnet-xxxxxxxxx",
@@ -12,7 +12,7 @@
   "Tags": [
     {
       "Key": "Name",
-      "Value": "FSx-HDD-32GB-Verification"
+      "Value": "FSx-HDD-2TB-Verification"
     },
     {
       "Key": "Environment",

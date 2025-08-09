@@ -18,13 +18,13 @@
 ### 🌐 **ネットワーク設定**
 - **VPC**: vpc-6c0ea60b
 - **サブネット**: 
-  - subnet-0756833f80249b7c9 (優先)
-  - subnet-092ae56c62ada86b9
-- **セキュリティグループ**: sg-026e3cb19c2a34ef5 (AD-FS-FSx-SG)
+  - subnet-xxxxxxxxx (優先)
+  - subnet-yyyyyyyyy
+- **セキュリティグループ**: sg-xxxxxxxxx (AD-FS-FSx-SG)
 - **DNS名**: amznfsxzhvxsuy4.company.local
 
 ### 🔐 **Active Directory設定**
-- **Directory ID**: d-95672c05c5
+- **Directory ID**: d-xxxxxxxxx
 - **ドメイン**: cloud.company.local
 - **タイプ**: Microsoft AD (Standard Edition)
 - **DNS IP**: 172.16.5.30, 172.16.4.89
@@ -53,14 +53,14 @@
   "StorageCapacity": 32,
   "StorageType": "HDD",
   "SubnetIds": [
-    "subnet-0756833f80249b7c9",
-    "subnet-092ae56c62ada86b9"
+    "subnet-xxxxxxxxx",
+    "subnet-yyyyyyyyy"
   ],
   "SecurityGroupIds": [
-    "sg-026e3cb19c2a34ef5"
+    "sg-xxxxxxxxx"
   ],
   "WindowsConfiguration": {
-    "ActiveDirectoryId": "d-95672c05c5",
+    "ActiveDirectoryId": "d-xxxxxxxxx",
     "ThroughputCapacity": 16,
     "DeploymentType": "MULTI_AZ_1"
   }

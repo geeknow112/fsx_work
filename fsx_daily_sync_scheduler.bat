@@ -39,7 +39,7 @@ echo Creating scheduled task...
 REM Create scheduled task for daily execution at 2:00 AM
 schtasks /create ^
     /tn "FSx_Daily_Differential_Sync" ^
-    /tr "\"%SCRIPT_PATH%\"" ^
+    /tr "cmd.exe /c \"cd /d \"%CURRENT_DIR%\" && \"%SCRIPT_PATH%\"\"" ^
     /sc daily ^
     /st 02:40 ^
     /ru "SYSTEM" ^

@@ -8,7 +8,7 @@ setlocal enabledelayedexpansion
 
 echo ================================================================
 echo FSx Daily Sync Scheduler Setup
-echo Target Time: Every day at 2:30 AM
+echo Target Time: Every day at 2:40 AM
 echo ================================================================
 
 REM Check if running as administrator
@@ -41,7 +41,7 @@ schtasks /create ^
     /tn "FSx_Daily_Differential_Sync" ^
     /tr "\"%SCRIPT_PATH%\"" ^
     /sc daily ^
-    /st 02:30 ^
+    /st 02:40 ^
     /ru "SYSTEM" ^
     /rl highest ^
     /f
@@ -51,7 +51,7 @@ if %errorLevel% equ 0 (
     echo ================================================================
     echo Scheduled task created successfully
     echo Task Name: FSx_Daily_Differential_Sync
-    echo Schedule: Daily at 2:30 AM
+    echo Schedule: Daily at 2:40 AM
     echo Script: %SCRIPT_PATH%
     echo Run As: SYSTEM (highest privileges)
     echo ================================================================

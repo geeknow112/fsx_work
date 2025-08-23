@@ -7,9 +7,10 @@ REM ================================================================
 setlocal enabledelayedexpansion
 
 REM CONFIGURATION - MODIFY THESE VALUES
+set BASE_DIR=%~dp0
 set OLD_FSX=\\<OLD_IP>\share
 set NEW_FSX=\\<NEW_IP>\share
-set LOG_DIR=.\logs
+set LOG_DIR=%BASE_DIR%logs
 set TIMESTAMP=%date:~0,4%%date:~5,2%%date:~8,2%_%time:~0,2%%time:~3,2%%time:~6,2%
 set TIMESTAMP=%TIMESTAMP: =0%
 

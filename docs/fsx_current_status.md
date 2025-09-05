@@ -23,7 +23,7 @@
   - subnet-yyyyyyyyy
 - **DNS名**: amznfsxzhvxsuy4.company.local
 - **管理エンドポイント**: amznfsxwiqlhcih.company.local
-- **優先ファイルサーバーIP**: 172.16.5.245
+- **優先ファイルサーバーIP**: <IP_ADDRESS>
 
 ### Active Directory設定
 - **ドメイン**: company.local
@@ -53,4 +53,4 @@
 - **ファイル共有アクセス監査**: 無効
 
 ### 暗号化
-- **KMS キー**: arn:aws:kms:ap-northeast-1:030391133325:key/0a3a4c2b-53a5-4085-a13f-718694ff69c4
+- **KMS キー**: arn:aws:kms:ap-northeast-1:<ACCOUNT_ID>:key/0a3a4c2b-53a5-4085-a13f-718694ff69c4

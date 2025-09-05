@@ -27,7 +27,7 @@
 - **Directory ID**: d-xxxxxxxxx
 - **ドメイン**: cloud.company.local
 - **タイプ**: Microsoft AD (Standard Edition)
-- **DNS IP**: 172.16.5.30, 172.16.4.89
+- **DNS IP**: <IP_ADDRESS>, 172.16.4.89
 
 ### 📊 **現在の使用状況（過去24時間）**
 - **データ読み取り**: 1,197,424,238 bytes (約1.12GB)
